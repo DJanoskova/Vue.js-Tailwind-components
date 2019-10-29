@@ -8,7 +8,6 @@
 
 <script>
 import FormLabel from './FormLabel'
-
 export default {
   props: {
     type: {
@@ -36,6 +35,7 @@ export default {
   watch: {
     model () {
       this.$emit('input', this.model)
+      this.$emit('change', this.model)
     },
     value () {
       this.model = this.value
